@@ -1,0 +1,25 @@
+<idea-plugin version="2">
+    <id>com.lee.export.plugin.id</id>
+    <name>Export Class</name>
+    <version>1.0</version>
+    <vendor email="lee9213@163.com"/>
+
+    <description>
+        <![CDATA[
+      Export Class To Desktop.<br>
+      <em>just test for windows</em>
+    ]]>
+    </description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
+
+    <actions>
+        <group id="Export" text="Export..." popup="true">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="before" relative-to-action="CutCopyPasteGroup"/>
+            <action id="Export Compiler File" class="com.lee9213.actions.ExportCompiledFileAction" text="Export Compiled Files" />
+            <action id="Export All File" class="com.lee9213.actions.ExportSelectedFileAction" text="Export Selected Files"/>
+        </group>
+    </actions>
+
+</idea-plugin>
